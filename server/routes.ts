@@ -51,7 +51,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Get meal by id
   app.get("/api/meal/:id", async (req, res) => {
     try {
-      const meal = await storage.getMeal(parseInt(req.params.id));
+      const mealId = parseInt(req.params.id);
+      if (isNaN(mealId)) {
+        return res.status(400).json({ message: "Invalid meal ID" });
+      }
+      
+      const meal = await storage.getMeal(mealId);
       if (!meal) {
         return res.status(404).json({ message: "Meal not found" });
       }

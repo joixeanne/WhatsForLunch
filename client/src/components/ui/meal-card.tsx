@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useLocation } from "wouter";
 import { Meal } from "@shared/schema";
 
 type MealCardProps = {
@@ -8,6 +9,8 @@ type MealCardProps = {
 };
 
 export function MealCard({ meal, delay = 0, isVisible = true }: MealCardProps) {
+  const [, navigate] = useLocation();
+
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -21,18 +24,31 @@ export function MealCard({ meal, delay = 0, isVisible = true }: MealCardProps) {
     }
   };
   
+  const handleClick = () => {
+    navigate(`/meal/${meal.id}`);
+  };
+  
   return (
     <motion.div
-      className={`bg-white dark:bg-[#1E1E1E] rounded-lg shadow-md overflow-hidden ${isVisible ? "" : "hidden"}`}
+      className={`bg-white dark:bg-[#1E1E1E] rounded-lg shadow-md overflow-hidden cursor-pointer ${isVisible ? "" : "hidden"}`}
       variants={cardVariants}
       initial="hidden"
       animate="visible"
       whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+      whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.3 }}
+      onClick={handleClick}
     >
       <img src={meal.imageUrl} alt={meal.name} className="w-full h-48 object-cover" />
       <div className="p-5">
-        <h3 className="font-semibold text-xl mb-2">{meal.name}</h3>
+        <div className="flex justify-between items-start mb-2">
+          <h3 className="font-semibold text-xl">{meal.name}</h3>
+          <div className="bg-primary/20 text-primary dark:bg-primary/10 dark:text-primary rounded-full p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+            </svg>
+          </div>
+        </div>
         <p className="text-gray-600 dark:text-gray-300 mb-4">{meal.description}</p>
         
         <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">

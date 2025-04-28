@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
 import CategoriesPage from "@/pages/CategoriesPage";
 import MealsPage from "@/pages/MealsPage";
+import MealDetailPage from "@/pages/MealDetailPage";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { AnimatePresence } from "framer-motion";
@@ -19,6 +20,7 @@ function Router() {
         <Route path="/" component={HomePage} />
         <Route path="/categories" component={CategoriesPage} />
         <Route path="/meals/:category" component={MealsPage} />
+        <Route path="/meal/:id" component={MealDetailPage} />
         <Route component={NotFound} />
       </Switch>
     </AnimatePresence>
