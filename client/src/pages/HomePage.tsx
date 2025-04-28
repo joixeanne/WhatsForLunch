@@ -24,7 +24,7 @@ export default function HomePage() {
         className="z-10 text-center px-4"
         variants={fadeIn}
       >
-        <h1 className="font-bold text-5xl md:text-7xl mb-6 text-primary">What's for Lunch</h1>
+        <h1 className="font-bold text-5xl md:text-7xl mb-6 text-primary">What's My Cravings?</h1>
         <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
           Discover delicious meals for every time of day with nutritional information at your fingertips.
         </p>

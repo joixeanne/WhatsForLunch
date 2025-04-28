@@ -19,6 +19,8 @@ export const meals = pgTable("meals", {
   imageUrl: text("image_url").notNull(),
   nutritionalInfo: jsonb("nutritional_info").$type<NutritionalInfo>().notNull(),
   tags: text("tags").array().notNull(),
+  ingredients: text("ingredients").array().notNull().default([]),
+  steps: text("steps").array().notNull().default([]),
 });
 
 // Categories Table

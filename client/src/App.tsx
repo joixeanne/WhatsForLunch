@@ -8,6 +8,7 @@ import HomePage from "@/pages/HomePage";
 import CategoriesPage from "@/pages/CategoriesPage";
 import MealsPage from "@/pages/MealsPage";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 
@@ -29,9 +30,14 @@ function App() {
     <ThemeProvider attribute="class" defaultTheme="light">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
-          <Navigation />
-          <Toaster />
-          <Router />
+          <div className="min-h-screen flex flex-col">
+            <Navigation />
+            <Toaster />
+            <main className="flex-grow">
+              <Router />
+            </main>
+            <Footer />
+          </div>
         </TooltipProvider>
       </QueryClientProvider>
     </ThemeProvider>

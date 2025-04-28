@@ -13,7 +13,7 @@ export default function Navigation() {
       transition={{ duration: 0.3 }}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="/" className="text-primary font-bold text-2xl">What's for Lunch</a>
+        <a href="/" className="text-primary font-bold text-2xl">What's My Cravings?</a>
         <ThemeToggle />
       </div>
     </motion.nav>
