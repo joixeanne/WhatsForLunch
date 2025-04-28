@@ -130,7 +130,7 @@ export class MemStorage implements IStorage {
       slug: "breakfast",
       description: "Start your day right",
       imageUrl: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666",
-      mealCount: 3
+      mealCount: 8
     };
     
     const lunchCategory: InsertCategory = {
@@ -138,7 +138,7 @@ export class MemStorage implements IStorage {
       slug: "lunch",
       description: "Midday energy boost",
       imageUrl: "https://images.unsplash.com/photo-1547496502-affa22d38842",
-      mealCount: 3
+      mealCount: 8
     };
     
     const dinnerCategory: InsertCategory = {
@@ -146,7 +146,7 @@ export class MemStorage implements IStorage {
       slug: "dinner",
       description: "Evening satisfaction",
       imageUrl: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
-      mealCount: 3
+      mealCount: 6
     };
     
     this.createCategory(breakfastCategory);
@@ -402,7 +402,171 @@ export class MemStorage implements IStorage {
         carbs: 52,
         fats: 22
       },
-      tags: ["vegetarian", "high-fiber"]
+      tags: ["vegetarian", "high-fiber"],
+      ingredients: [
+        "1 cup cooked quinoa",
+        "1 cup roasted vegetables (bell peppers, zucchini, eggplant)",
+        "1/2 cup chickpeas, rinsed and drained",
+        "1/4 cup crumbled feta cheese",
+        "2 tbsp olive oil",
+        "1 tbsp lemon juice",
+        "1 clove garlic, minced",
+        "1 tsp dried herbs (oregano, basil, thyme)",
+        "Salt and pepper to taste",
+        "Fresh herbs for garnish"
+      ],
+      steps: [
+        "Cook quinoa according to package instructions and let cool.",
+        "In a large bowl, combine quinoa, roasted vegetables, and chickpeas.",
+        "In a small bowl, whisk together olive oil, lemon juice, minced garlic, dried herbs, salt, and pepper.",
+        "Pour the dressing over the quinoa mixture and toss gently to combine.",
+        "Top with crumbled feta cheese and fresh herbs.",
+        "Serve at room temperature or chilled."
+      ]
+    });
+    
+    // Additional lunch meals
+    this.createMeal({
+      name: "Asian-Inspired Chicken Salad",
+      description: "Crisp mixed greens with grilled chicken, mandarin oranges, and a sesame-ginger dressing.",
+      category: "lunch",
+      imageUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+      nutritionalInfo: {
+        calories: 420,
+        protein: 35,
+        carbs: 25,
+        fats: 20
+      },
+      tags: ["high-protein", "low-carb"],
+      ingredients: [
+        "4 cups mixed greens",
+        "6 oz grilled chicken breast, sliced",
+        "1/2 cup mandarin orange segments",
+        "1/4 cup sliced almonds",
+        "2 tbsp chopped green onions",
+        "1/4 cup crispy wonton strips",
+        "2 tbsp sesame oil",
+        "1 tbsp rice vinegar",
+        "1 tsp soy sauce",
+        "1 tsp honey",
+        "1/2 tsp grated fresh ginger",
+        "1 tsp toasted sesame seeds"
+      ],
+      steps: [
+        "In a large bowl, toss mixed greens with half of the green onions.",
+        "Arrange grilled chicken slices, mandarin oranges, and almonds on top.",
+        "In a small bowl, whisk together sesame oil, rice vinegar, soy sauce, honey, and ginger.",
+        "Drizzle the dressing over the salad.",
+        "Top with crispy wonton strips, remaining green onions, and sesame seeds.",
+        "Serve immediately."
+      ]
+    });
+    
+    this.createMeal({
+      name: "Turkey Avocado Sandwich",
+      description: "Hearty sandwich with sliced turkey, avocado, bacon, and lettuce on whole grain bread.",
+      category: "lunch",
+      imageUrl: "https://images.unsplash.com/photo-1550507992-eb63ffee0847",
+      nutritionalInfo: {
+        calories: 550,
+        protein: 32,
+        carbs: 38,
+        fats: 28
+      },
+      tags: ["high-protein", "high-fat"],
+      ingredients: [
+        "2 slices whole grain bread",
+        "4 oz sliced turkey breast",
+        "2 slices cooked bacon",
+        "1/2 ripe avocado, sliced",
+        "2 lettuce leaves",
+        "2 slices tomato",
+        "1 tbsp mayonnaise",
+        "1 tsp Dijon mustard",
+        "Salt and pepper to taste"
+      ],
+      steps: [
+        "Lightly toast the bread slices if desired.",
+        "Spread mayonnaise on one slice of bread and mustard on the other.",
+        "Layer lettuce, turkey slices, bacon, avocado, and tomato slices on one piece of bread.",
+        "Season with salt and pepper to taste.",
+        "Top with the second piece of bread and slice diagonally.",
+        "Serve with a side of chips or fruit."
+      ]
+    });
+    
+    this.createMeal({
+      name: "Roasted Vegetable Pita Pocket",
+      description: "Warm pita bread filled with hummus, roasted vegetables, and a drizzle of tahini sauce.",
+      category: "lunch",
+      imageUrl: "https://images.unsplash.com/photo-1540420773420-3366772f4999",
+      nutritionalInfo: {
+        calories: 380,
+        protein: 12,
+        carbs: 48,
+        fats: 16
+      },
+      tags: ["vegetarian", "low-fat"],
+      ingredients: [
+        "1 whole wheat pita pocket",
+        "3 tbsp hummus",
+        "1 cup mixed roasted vegetables (bell peppers, zucchini, eggplant)",
+        "1/4 cup baby spinach leaves",
+        "2 tbsp crumbled feta cheese",
+        "1 tbsp tahini sauce",
+        "1 tsp lemon juice",
+        "1/4 tsp za'atar spice blend (optional)",
+        "Salt and pepper to taste"
+      ],
+      steps: [
+        "Warm the pita pocket in a toaster or oven until slightly crisp but still flexible.",
+        "Cut the pita in half to create two pockets.",
+        "Spread hummus inside each pita half.",
+        "Fill with roasted vegetables and baby spinach.",
+        "Top with crumbled feta cheese.",
+        "In a small bowl, mix tahini sauce with lemon juice and a splash of water to thin it out.",
+        "Drizzle the tahini sauce over the filling.",
+        "Sprinkle with za'atar spice blend if using, and season with salt and pepper.",
+        "Serve immediately while still warm."
+      ]
+    });
+    
+    this.createMeal({
+      name: "Tuna Nicoise Salad",
+      description: "Classic French salad with tuna, green beans, potatoes, olives, and a dijon vinaigrette.",
+      category: "lunch",
+      imageUrl: "https://images.unsplash.com/photo-1490645935967-10de6ba17061",
+      nutritionalInfo: {
+        calories: 440,
+        protein: 28,
+        carbs: 30,
+        fats: 24
+      },
+      tags: ["high-protein", "dairy-free"],
+      ingredients: [
+        "4 oz seared or canned tuna",
+        "2 cups mixed greens",
+        "6 small new potatoes, boiled and halved",
+        "1 cup green beans, blanched",
+        "2 hard-boiled eggs, quartered",
+        "1/4 cup Kalamata olives",
+        "8 cherry tomatoes, halved",
+        "2 tbsp olive oil",
+        "1 tbsp red wine vinegar",
+        "1 tsp Dijon mustard",
+        "1 small shallot, minced",
+        "1 tsp fresh thyme leaves",
+        "Salt and pepper to taste"
+      ],
+      steps: [
+        "Arrange mixed greens on a large plate or shallow bowl.",
+        "Top with arranged sections of potatoes, green beans, eggs, olives, and tomatoes.",
+        "Place tuna in the center of the salad.",
+        "In a small bowl, whisk together olive oil, red wine vinegar, Dijon mustard, shallot, and thyme.",
+        "Season the dressing with salt and pepper.",
+        "Drizzle the dressing over the salad.",
+        "Serve with additional dressing on the side."
+      ]
     });
     
     this.createMeal({
@@ -416,7 +580,31 @@ export class MemStorage implements IStorage {
         carbs: 45,
         fats: 30
       },
-      tags: ["high-protein", "high-calorie"]
+      tags: ["high-protein", "high-calorie"],
+      ingredients: [
+        "1 large spinach tortilla wrap",
+        "6 oz grilled chicken breast, sliced",
+        "1/2 cup shredded lettuce",
+        "1/4 cup diced tomatoes",
+        "1/4 cup sliced bell peppers",
+        "1/4 cup shredded carrots",
+        "2 tbsp chipotle mayo",
+        "1 tbsp lime juice",
+        "1/4 tsp ground cumin",
+        "Salt and pepper to taste",
+        "Fresh cilantro leaves (optional)"
+      ],
+      steps: [
+        "Season chicken with salt, pepper, and cumin, then grill until fully cooked.",
+        "Slice the chicken into strips and set aside.",
+        "Warm the spinach tortilla in a pan or microwave for 10 seconds.",
+        "Spread chipotle mayo over the tortilla.",
+        "Arrange chicken strips down the center of the tortilla.",
+        "Top with lettuce, tomatoes, bell peppers, and carrots.",
+        "Sprinkle with lime juice and cilantro if using.",
+        "Fold in the sides of the tortilla, then roll up tightly.",
+        "Cut in half diagonally and serve with additional chipotle mayo on the side."
+      ]
     });
     
     this.createMeal({
@@ -430,7 +618,73 @@ export class MemStorage implements IStorage {
         carbs: 48,
         fats: 22
       },
-      tags: ["vegetarian", "low-calorie"]
+      tags: ["vegetarian", "low-calorie"],
+      ingredients: [
+        "1 cup prepared hummus",
+        "1/2 cucumber, diced",
+        "1 cup cherry tomatoes, halved",
+        "1/4 cup Kalamata olives, pitted and sliced",
+        "1/4 cup crumbled feta cheese",
+        "2 tbsp extra virgin olive oil",
+        "1 tbsp fresh lemon juice",
+        "1 tsp dried oregano",
+        "1/4 cup fresh parsley, chopped",
+        "1 warm pita bread, cut into triangles",
+        "Salt and pepper to taste"
+      ],
+      steps: [
+        "Spread hummus in a shallow bowl, creating a well in the center.",
+        "Arrange cucumber, tomatoes, olives, and feta cheese around the hummus.",
+        "In a small bowl, mix olive oil, lemon juice, oregano, salt, and pepper.",
+        "Drizzle the dressing over the entire bowl.",
+        "Sprinkle with chopped parsley.",
+        "Serve with warm pita bread triangles on the side.",
+        "For best presentation, place the pita bread around the edge of the bowl."
+      ]
+    });
+    
+    // Additional lunch meals
+    this.createMeal({
+      name: "Lentil Soup with Crusty Bread",
+      description: "Hearty lentil soup with vegetables, herbs, and a side of warm crusty bread.",
+      category: "lunch",
+      imageUrl: "https://images.unsplash.com/photo-1547592180-85f173990554",
+      nutritionalInfo: {
+        calories: 410,
+        protein: 18,
+        carbs: 60,
+        fats: 10
+      },
+      tags: ["vegetarian", "high-fiber"],
+      ingredients: [
+        "1 cup dried lentils, rinsed",
+        "1 onion, diced",
+        "2 carrots, diced",
+        "2 celery stalks, diced",
+        "3 cloves garlic, minced",
+        "1 tbsp olive oil",
+        "4 cups vegetable broth",
+        "1 can (14 oz) diced tomatoes",
+        "1 tsp ground cumin",
+        "1/2 tsp dried thyme",
+        "1 bay leaf",
+        "2 cups baby spinach",
+        "1 tbsp lemon juice",
+        "Salt and pepper to taste",
+        "Fresh parsley for garnish",
+        "Crusty bread for serving"
+      ],
+      steps: [
+        "Heat olive oil in a large pot over medium heat.",
+        "Add onion, carrots, and celery; sauté until softened, about 5 minutes.",
+        "Add garlic and cook for another minute until fragrant.",
+        "Stir in lentils, diced tomatoes, cumin, thyme, and bay leaf.",
+        "Pour in vegetable broth and bring to a boil.",
+        "Reduce heat and simmer, covered, for 25-30 minutes until lentils are tender.",
+        "Remove bay leaf and stir in spinach until wilted.",
+        "Add lemon juice, salt, and pepper to taste.",
+        "Garnish with fresh parsley and serve with warm crusty bread."
+      ]
     });
     
     // Dinner meals
@@ -445,7 +699,29 @@ export class MemStorage implements IStorage {
         carbs: 12,
         fats: 48
       },
-      tags: ["high-protein", "low-carb", "high-fat"]
+      tags: ["high-protein", "low-carb", "high-fat"],
+      ingredients: [
+        "2 salmon fillets (6 oz each)",
+        "1 bunch asparagus, trimmed",
+        "2 tbsp olive oil, divided",
+        "1 lemon, half sliced and half juiced",
+        "2 cloves garlic, minced",
+        "1 tbsp fresh dill, chopped",
+        "1 tbsp dijon mustard",
+        "1/4 cup Greek yogurt",
+        "Salt and pepper to taste",
+        "1 tbsp capers (optional)"
+      ],
+      steps: [
+        "Preheat grill or oven to 400°F (200°C).",
+        "Season salmon fillets with salt, pepper, and 1 tbsp olive oil.",
+        "Toss asparagus with remaining olive oil, minced garlic, salt, and pepper.",
+        "For the sauce, mix Greek yogurt, lemon juice, dijon mustard, and chopped dill in a small bowl.",
+        "If grilling, place salmon skin-side down and cook for 4-5 minutes per side. If baking, place salmon and lemon slices on a baking sheet and cook for 12-15 minutes.",
+        "Grill or roast asparagus until tender, about 5-7 minutes.",
+        "Plate the salmon with asparagus on the side, drizzle with lemon-dill sauce.",
+        "Garnish with additional dill, capers (if using), and lemon wedges."
+      ]
     });
     
     this.createMeal({
@@ -459,7 +735,37 @@ export class MemStorage implements IStorage {
         carbs: 62,
         fats: 18
       },
-      tags: ["vegetarian", "high-fiber"]
+      tags: ["vegetarian", "high-fiber"],
+      ingredients: [
+        "1 block (14 oz) extra-firm tofu, pressed and cubed",
+        "1 red bell pepper, sliced",
+        "1 yellow bell pepper, sliced",
+        "2 cups broccoli florets",
+        "1 carrot, julienned",
+        "1 cup snap peas",
+        "1 cup mushrooms, sliced",
+        "3 cloves garlic, minced",
+        "1 tbsp fresh ginger, grated",
+        "3 tbsp low-sodium soy sauce",
+        "1 tbsp rice vinegar",
+        "1 tbsp sesame oil",
+        "1 tbsp cornstarch mixed with 2 tbsp water",
+        "2 tbsp vegetable oil",
+        "2 cups cooked brown rice",
+        "Green onions and sesame seeds for garnish"
+      ],
+      steps: [
+        "Press tofu to remove excess water, then cut into 1-inch cubes.",
+        "Heat 1 tbsp vegetable oil in a large wok or pan over medium-high heat.",
+        "Add tofu and cook until golden brown on all sides, about 5-7 minutes. Remove and set aside.",
+        "Add remaining vegetable oil to the pan. Add garlic and ginger, stir for 30 seconds until fragrant.",
+        "Add vegetables in order of firmness (carrots first, then broccoli, peppers, and finally mushrooms and snap peas), stirring frequently.",
+        "Cook vegetables until crisp-tender, about 5-7 minutes.",
+        "In a small bowl, whisk together soy sauce, rice vinegar, sesame oil, and cornstarch mixture.",
+        "Return tofu to the pan, add the sauce, and stir to coat everything evenly.",
+        "Cook for another 2 minutes until sauce thickens.",
+        "Serve over brown rice, garnished with green onions and sesame seeds."
+      ]
     });
     
     this.createMeal({
@@ -473,7 +779,210 @@ export class MemStorage implements IStorage {
         carbs: 98,
         fats: 26
       },
-      tags: ["vegetarian", "high-carb"]
+      tags: ["vegetarian", "high-carb"],
+      ingredients: [
+        "12 oz fettuccine or penne pasta",
+        "1 cup cherry tomatoes, halved",
+        "1 zucchini, diced",
+        "1 yellow squash, diced",
+        "1 red bell pepper, sliced",
+        "1 cup asparagus, cut into 1-inch pieces",
+        "1 cup broccoli florets",
+        "1/2 cup frozen peas",
+        "3 cloves garlic, minced",
+        "1 small onion, diced",
+        "2 tbsp olive oil",
+        "1/2 cup heavy cream",
+        "1/4 cup vegetable broth",
+        "1/2 cup grated Parmesan cheese",
+        "2 tbsp fresh basil, chopped",
+        "1 tbsp fresh parsley, chopped",
+        "1 tsp lemon zest",
+        "Salt and pepper to taste",
+        "Red pepper flakes (optional)"
+      ],
+      steps: [
+        "Cook pasta according to package instructions until al dente. Reserve 1/2 cup pasta water before draining.",
+        "Meanwhile, heat olive oil in a large skillet over medium-high heat.",
+        "Add onion and cook until softened, about 3 minutes.",
+        "Add garlic and cook for 30 seconds until fragrant.",
+        "Add harder vegetables first (broccoli, asparagus) and cook for 3 minutes.",
+        "Add bell pepper, zucchini, and yellow squash. Cook for another 3-4 minutes until all vegetables are tender-crisp.",
+        "Add cherry tomatoes and frozen peas, cook for 1 minute.",
+        "Reduce heat to medium-low, add heavy cream and vegetable broth, simmer for 2 minutes.",
+        "Add drained pasta to the skillet along with half the Parmesan cheese and toss to combine.",
+        "If needed, add reserved pasta water a little at a time to reach desired consistency.",
+        "Stir in fresh herbs and lemon zest.",
+        "Season with salt, pepper, and red pepper flakes if desired.",
+        "Serve hot, garnished with remaining Parmesan cheese and additional fresh herbs."
+      ]
+    });
+    
+    // Additional dinner meals
+    this.createMeal({
+      name: "Beef and Broccoli Stir Fry",
+      description: "Tender slices of beef with crisp broccoli in a savory soy-ginger sauce.",
+      category: "dinner",
+      imageUrl: "https://images.unsplash.com/photo-1625937286074-9ca519d5d9df",
+      nutritionalInfo: {
+        calories: 580,
+        protein: 40,
+        carbs: 32,
+        fats: 32
+      },
+      tags: ["high-protein", "low-carb"],
+      ingredients: [
+        "1 lb flank steak, thinly sliced against the grain",
+        "4 cups broccoli florets",
+        "1 red bell pepper, sliced",
+        "1 small onion, sliced",
+        "3 cloves garlic, minced",
+        "1 tbsp fresh ginger, grated",
+        "1/4 cup low-sodium soy sauce",
+        "2 tbsp oyster sauce",
+        "1 tbsp honey",
+        "1 tbsp rice vinegar",
+        "1 tbsp cornstarch",
+        "2 tbsp vegetable oil, divided",
+        "1/2 cup beef broth",
+        "2 cups cooked jasmine rice",
+        "Sesame seeds and green onions for garnish"
+      ],
+      steps: [
+        "In a bowl, mix soy sauce, oyster sauce, honey, rice vinegar, and cornstarch to make the sauce.",
+        "Heat 1 tbsp oil in a large wok or skillet over high heat.",
+        "Add beef in a single layer and cook for 2-3 minutes until browned. Work in batches if needed. Remove and set aside.",
+        "Add remaining oil to the wok. Add garlic and ginger, stir for 30 seconds.",
+        "Add broccoli, bell pepper, and onion. Stir-fry for 4-5 minutes until vegetables are crisp-tender.",
+        "Return beef to the wok. Pour in the sauce and beef broth.",
+        "Cook, stirring constantly, until sauce thickens, about 2 minutes.",
+        "Serve over jasmine rice, garnished with sesame seeds and sliced green onions."
+      ]
+    });
+    
+    this.createMeal({
+      name: "Baked Chicken Parmesan",
+      description: "Crispy baked chicken cutlets topped with marinara sauce and melted mozzarella.",
+      category: "dinner",
+      imageUrl: "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8",
+      nutritionalInfo: {
+        calories: 620,
+        protein: 48,
+        carbs: 42,
+        fats: 28
+      },
+      tags: ["high-protein", "high-calorie"],
+      ingredients: [
+        "2 boneless, skinless chicken breasts, halved horizontally",
+        "1/2 cup all-purpose flour",
+        "2 large eggs, beaten",
+        "1 cup panko breadcrumbs",
+        "1/2 cup grated Parmesan cheese, divided",
+        "1 tsp dried Italian herbs",
+        "1/2 tsp garlic powder",
+        "2 tbsp olive oil",
+        "1 1/2 cups marinara sauce",
+        "1 cup shredded mozzarella cheese",
+        "2 tbsp fresh basil, chopped",
+        "8 oz spaghetti or linguine pasta",
+        "Salt and pepper to taste"
+      ],
+      steps: [
+        "Preheat oven to 425°F (220°C). Line a baking sheet with parchment paper.",
+        "Season chicken cutlets with salt and pepper on both sides.",
+        "Set up breading station: flour in one dish, beaten eggs in another, and mix panko with 1/4 cup Parmesan, Italian herbs, and garlic powder in a third dish.",
+        "Dredge each chicken piece in flour, then dip in egg, and finally coat in the panko mixture, pressing to adhere.",
+        "Place breaded chicken on the baking sheet, drizzle with olive oil.",
+        "Bake for 15 minutes, until golden and crispy.",
+        "Meanwhile, cook pasta according to package directions.",
+        "Remove chicken from oven, top each piece with marinara sauce and sprinkle with mozzarella and remaining Parmesan.",
+        "Return to oven and bake for another 5-7 minutes, until cheese is melted and bubbly.",
+        "Drain pasta and toss with a little olive oil or additional marinara sauce.",
+        "Serve chicken over pasta, garnished with fresh basil."
+      ]
+    });
+    
+    this.createMeal({
+      name: "Shrimp Scampi",
+      description: "Succulent shrimp sautéed in a garlic butter sauce, served over linguine pasta.",
+      category: "dinner",
+      imageUrl: "https://images.unsplash.com/photo-1560717845-968823efbee1",
+      nutritionalInfo: {
+        calories: 580,
+        protein: 32,
+        carbs: 52,
+        fats: 26
+      },
+      tags: ["high-protein", "seafood"],
+      ingredients: [
+        "1 lb large shrimp, peeled and deveined",
+        "8 oz linguine pasta",
+        "4 tbsp unsalted butter",
+        "4 tbsp olive oil",
+        "5 cloves garlic, minced",
+        "1/4 tsp red pepper flakes",
+        "1/4 cup dry white wine",
+        "1 lemon, juiced and zested",
+        "1/4 cup fresh parsley, chopped",
+        "Salt and pepper to taste",
+        "Grated Parmesan cheese for serving"
+      ],
+      steps: [
+        "Cook linguine according to package instructions until al dente. Reserve 1/2 cup pasta water before draining.",
+        "Meanwhile, pat shrimp dry with paper towels and season with salt and pepper.",
+        "In a large skillet, heat 2 tbsp olive oil over medium-high heat.",
+        "Add shrimp in a single layer and cook for 1-2 minutes per side until pink and just cooked through. Transfer to a plate.",
+        "Reduce heat to medium-low, add remaining oil and butter to the skillet.",
+        "Add garlic and red pepper flakes, cook for 1 minute until fragrant.",
+        "Pour in white wine and lemon juice, simmer for 2-3 minutes until slightly reduced.",
+        "Return shrimp to the skillet, add drained pasta and toss to combine.",
+        "Add lemon zest, parsley, and additional pasta water if needed to loosen the sauce.",
+        "Adjust seasoning with salt and pepper.",
+        "Serve hot with grated Parmesan cheese on top."
+      ]
+    });
+    
+    this.createMeal({
+      name: "Stuffed Bell Peppers",
+      description: "Colorful bell peppers stuffed with a flavorful mixture of ground turkey, rice, and vegetables.",
+      category: "dinner",
+      imageUrl: "https://images.unsplash.com/photo-1603903631918-a6499746a72d",
+      nutritionalInfo: {
+        calories: 410,
+        protein: 28,
+        carbs: 40,
+        fats: 16
+      },
+      tags: ["high-protein", "low-fat"],
+      ingredients: [
+        "4 large bell peppers (any color), tops removed and seeded",
+        "1 lb lean ground turkey",
+        "1 cup cooked brown rice",
+        "1 small onion, diced",
+        "2 cloves garlic, minced",
+        "1 zucchini, diced",
+        "1 cup canned diced tomatoes, drained",
+        "1 tbsp tomato paste",
+        "1 tsp dried oregano",
+        "1 tsp ground cumin",
+        "1/2 cup shredded mozzarella cheese",
+        "2 tbsp olive oil",
+        "1/4 cup fresh parsley, chopped",
+        "Salt and pepper to taste"
+      ],
+      steps: [
+        "Preheat oven to 375°F (190°C).",
+        "Bring a large pot of water to a boil. Add bell peppers and cook for 3-5 minutes until slightly softened. Drain and set aside.",
+        "Heat olive oil in a large skillet over medium heat. Add onion and cook until softened, about 3 minutes.",
+        "Add garlic and cook for another 30 seconds until fragrant.",
+        "Add ground turkey, breaking it up with a spoon, and cook until no longer pink, about 5-7 minutes.",
+        "Stir in zucchini, diced tomatoes, tomato paste, oregano, cumin, salt, and pepper. Cook for 3-4 minutes.",
+        "Remove from heat and stir in cooked rice and half the parsley.",
+        "Place bell peppers in a baking dish. Fill each pepper with the turkey and rice mixture.",
+        "Top with shredded mozzarella cheese.",
+        "Cover with foil and bake for 25 minutes. Remove foil and bake for another 10 minutes until cheese is golden and bubbly.",
+        "Garnish with remaining parsley before serving."
+      ]
     });
   }
 }
